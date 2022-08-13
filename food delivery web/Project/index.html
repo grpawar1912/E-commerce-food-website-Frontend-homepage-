@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online food order system</title>
+    <style>
+        .navbar {
+            background-color:crimson;
+        }
+
+
+        body {
+            width: 0px;
+            padding: 0px;
+            background: url('img/lunch.jpg');
+            background-size: 1560px 1080px;
+            background-repeat: no-repeat;
+            height: 1000px;
+
+
+        }
+
+
+        .slide {
+            /* color: salmon; */
+            background-color: rgb(39, 38, 37);
+            padding: 11px;
+            margin-top: -1px;
+            width: 1500px;
+            border-radius: 15px;
+            font-size: 25px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-weight: bold;
+            font-style: oblique;
+            color: rgb(255, 255, 255);
+            position: fixed;
+
+
+        }
+
+        #navbar {
+            width: 1520px;
+            height: 46px;
+            background-color: rgb(198, 173, 141);
+            border-radius: 15px;
+
+
+
+        }
+
+        #list {
+            margin-top: 58px;
+            list-style: none;
+
+        }
+
+        .decoration a {
+            text-decoration: none;
+            float: left;
+            margin-left: 170px;
+            margin-top: 13px;
+            font-size: 20px;
+            cursor: pointer;
+            color: rgb(0, 0, 0);
+            font-weight: bold;
+        }
+
+        .position {
+            position: fixed;
+        }
+
+        a:hover {
+            background-color: black;
+            color: rgb(235, 207, 182);
+
+        }
+
+        a:active {
+            background-color: rgb(255, 255, 255);
+            color: black;
+        }
+
+        #logo {
+            height: 60px;
+            margin-top: 103px;
+            border-radius: 50px;
+            position: fixed;
+            color: blueviolet;
+            padding: 10px;
+
+        }
+
+        #delivery {
+            margin-top: 391px;
+            /* margin-left:px; */
+            height: 400px;
+            width: 390px;
+            border-radius: 50px;
+
+
+        }
+
+        #text {
+            margin-top: -390px;
+            margin-left: 80px;
+            font-size: 30px;
+            font-weight: bold;
+            font-family: 'Times New Roman', Times, serif;
+            color: blanchedalmond;
+            cursor: pointer;
+
+        }
+
+        .register {
+            margin-left: 70px;
+            margin-top: 30px;
+
+        }
+
+        #name {
+            width: 260px;
+            height: 20px;
+            border-radius: 15px;
+            border: none;
+            padding: 5px;
+            background-color:rgb(245, 233, 207);;
+        }
+
+        #email {
+            width: 260px;
+            height: 20px;
+            border-radius: 15px;
+            border: none;
+            padding: 5px;
+            background-color: rgb(245, 233, 207);;
+        }
+
+        #pass {
+            width: 260px;
+            height: 20px;
+            border-radius: 15px;
+            border: none;
+            padding: 5px;
+            background-color: rgb(245, 233, 207);
+        }
+
+        #address {
+            width: 260px;
+            height: 20px;
+            border-radius: 15px;
+            border: none;
+            padding: 5px;
+            background-color: rgb(245, 233, 207);
+        }
+
+        #num {
+            width: 260px;
+            height: 20px;
+            border-radius: 15px;
+            border: none;
+            padding: 5px;
+            background-color: rgb(245, 233, 207);
+        }
+
+        #sum {
+            margin-top: 20px;
+            width: 70px;
+            background-color: rgb(107, 54, 59);
+            margin-left: 90px;
+            border: none;
+            height: 25px;
+            border-radius: 20px;
+            color: rgb(247, 246, 245);
+            font-weight: bold;
+            cursor: pointer;
+
+        }
+
+        #button {
+            margin-left: 218px;
+            background-color: rgb(107, 54, 59);
+            width: 70px;
+            margin-left: 90px;
+            border: none;
+            height: 25px;
+            border-radius: 20px;
+            color: rgb(255, 255, 255);
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        #hungry {
+            text-align: center;
+            float: left;
+            margin-top: -600px;
+            margin-left: 580px;
+            width: 450px;
+            list-style: none;
+            font-size: 50px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: dimgrey;
+        }
+
+        #about {
+
+            /* margin-top: 200px; */
+            height: 580px;
+            background-color: rgb(255 208 137);
+            width: 1560px;
+            margin-left: -10px;
+            /* padding-left: 40px; */
+
+            font-size: 30px;
+        }
+
+        #us {
+
+            margin-left: 250px;
+            padding-top: 50px;
+        }
+
+        #ab {
+            font-size: 24px;
+            width: 590px;
+            margin-left: 20px;
+            text-align: justify;
+            color: rgb(0, 0, 0);
+            margin-top: 40px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        #image {
+
+            width: 600px;
+            margin-top: -480px;
+            margin-left: 800px;
+            background: url("img/about.jpg");
+            height: 340px;
+            animation: rasheed;
+            animation-duration: 20s;
+            animation-delay: 1s;
+            animation-iteration-count: infinite;
+            cursor: pointer;
+        }
+
+        @keyframes rasheed {
+            25% {
+                background: url("img/figure1.jpg");
+            }
+
+            75% {
+                background: url("img/figure3.jpg");
+            }
+
+            100% {
+                background: url("img/figure2.jpg");
+            }
+
+        }
+
+        .bg {
+            margin-left: -10px;
+            margin-top: 700px;
+            width: 1550px;
+            background: url('img/bg.jpg');
+            background-repeat: no-repeat;
+            background-size: 1590px 1000px;
+            height: 620px;
+        }
+
+        #pro {
+            margin-top: -600px;
+            width: 360px;
+            margin-left: 520px;
+            font-size: 45px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        #box1 {
+            height: 220px;
+            width: 240px;
+            /* border:2px solid rgb(5, 95, 131); */
+            margin-left: 100px;
+            margin-top: 80px;
+
+        }
+
+        #pizza {
+            height: 180px;
+            width: 240px;
+            transition: transform .4s;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        #pizza:hover {
+            transform: scale(1.2);
+        }
+
+        #super {
+            font-size: 25px;
+            margin-top: 11px;
+            padding: 2px;
+            margin-left: 48px;
+        }
+
+        #box2 {
+            height: 220px;
+            width: 240px;
+            /* border:2px solid rgb(5, 95, 131); */
+            margin-left: 460px;
+            margin-top: -220px;
+
+        }
+
+        #karhai {
+            width: 240px;
+            height: 180px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: transform .4s;
+        }
+
+        #karhai:hover {
+            transform: scale(1.2);
+
+        }
+
+        #box3 {
+            height: 220px;
+            width: 240px;
+            /* border:2px solid rgb(5, 95, 131); */
+            margin-left: 840px;
+            margin-top: -220px;
+
+        }
+
+        #burger {
+            width: 240px;
+            height: 180px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: transform .4s;
+        }
+
+        #burger:hover {
+            transform: scale(1.2);
+
+        }
+
+        
+        #box4{
+            height: 220px;
+            width: 240px;
+            /* border:2px solid rgb(5, 95, 131);*/ 
+            margin-left: 1200px;
+            margin-top: -220px;
+
+        }
+
+        #curry {
+            width: 240px;
+            height: 180px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: transform .4s;
+        }
+
+        #curry:hover {
+            transform: scale(1.2);
+
+        }
+        #box5 {
+            height: 220px;
+            width: 240px;
+            /* border:2px solid rgb(5, 95, 131); */
+            margin-left: 100px;
+            margin-top: 25px;
+
+        }
+
+        #biryani {
+            width: 240px;
+            height: 180px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: transform .4s;
+        }
+
+        #biryani:hover {
+            transform: scale(1.2);
+        }
+
+        #bri {
+            font-size: 25px;
+            margin-top: 11px;
+            padding: 2px;
+            margin-left: 34px;
+        }
+
+        #box6 {
+            height: 220px;
+            width: 240px;
+            /* border:2px solid rgb(5, 95, 131); */
+            margin-left: 460px;
+            margin-top: -220px;
+
+        }
+
+        #korma {
+            width: 240px;
+            height: 180px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: transform .4s;
+        }
+
+        #korma:hover {
+            transform: scale(1.2);
+        }
+
+        #box7{
+            height: 220px;
+            width: 240px;
+            /* border:2px solid rgb(5, 95, 131); */
+            margin-left: 840px;
+            margin-top: -220px;
+
+        }
+
+        #nehari {
+            width: 240px;
+            height: 180px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: transform .4s;
+        }
+
+        #nehari:hover {
+            transform: scale(1.2);
+        }
+
+        #box8 {
+            height: 220px;
+            width: 240px;
+            /* border:2px solid rgb(5, 95, 131); */
+            margin-left: 1200px;
+            margin-top: -220px;
+
+        }
+
+        #raita {
+            width: 240px;
+            height: 180px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: transform .4s;
+        }
+
+        #raita:hover {
+            transform: scale(1.2);
+
+        }
+
+        #contact {
+            margin-left: 180px;
+            margin-top: 0px;
+            width: 1200px;
+            background: url('img/pin.jpg');
+            background-repeat: no-repeat;
+            background-size: 1580px 1000px;
+            height: 600px;
+        }
+
+        #box9 {
+            width: 340px;
+            height: 360px;
+            /* border: 2px solid rgb(107, 54, 59); */
+            margin-top: 40px;
+            margin-left: 600px;
+            background: url('img/cont.jpg');
+            background-color: rgb(38, 77, 83);
+
+        }
+
+        #conntt {
+            width: 300px;
+            margin-top: -500px;
+            margin-left: 690px;
+            font-size: 30px;
+        }
+
+        #ema{
+            margin-left: 45px;
+            width: 240px;
+            height: 23px;
+            margin-top: 35px;
+        }
+
+        #namm{
+            margin-left: 45px;
+            width: 240px;
+            height: 23px;
+            margin-top: 10px;
+        }
+
+        #numm{
+            margin-left: 45px;
+            width: 240px;
+            height: 23px;
+            margin-top: 35px;
+        }
+
+        #tarea{
+            margin-left: 45px;
+            width: 245px;
+            height: 23px;
+            margin-top: 35px;
+            height: 100px;
+        }
+
+        #subm{
+            margin-top: 10px;
+            margin-left: 140px;
+        }
+
+    
+      
+    </style>
+</head>
+
+<body>
+
+    <section>
+
+        <p class="slide">
+            <marquee behavior="alternate" direction="right">“Good food never fails in bringing people together.”</marquee>
+        </p>
+    </section>
+
+
+    <section class="position">
+        <div id="navbar">
+            <ul id="list">
+                <li class="decoration"> <a href="#">Home</a> </li>
+                <li class="decoration"> <a href="#sum">About us</a> </li>
+                <li class="decoration"> <a href="#hungry">Registration</a> </li>
+                <li class="decoration"> <a href="#produ">Products</a> </li>
+                <li class="decoration"> <a href="#conntt">Contact us</a> </li>
+            </ul>
+        </div>
+    </section>
+    <div>
+        <img id="logo" src="img/logo.jpg" alt="Foodorder.com">
+    </div>
+    <div>
+        <img id="delivery" src="img/delivery.jpg" alt="does not load">
+    </div>
+
+    <div id="text">
+        REGISTRATION
+    </div>
+
+    <form action="backend.php">
+        <div class="register">
+            <div>
+                <input type="text" name="myname" id="name" placeholder="Entre your name"> &nbsp;
+
+            </div>
+
+            <div>
+                <input type="email" name="myemail" id="email" placeholder="Entre email address"> &nbsp;
+            </div>
+
+            <div>
+                <input type="password" name="mypass" id="pass" placeholder="Entre password"> &nbsp;
+            </div>
+            <div>
+                <input type="text" name="myadd" id="address" placeholder="Entre your home address"> &nbsp;
+            </div>
+
+            <div>
+                <input type="text" name="mynum" id="num" placeholder="Entre your mobile number"> &nbsp;
+            </div>
+            <label for="button" class="reset">
+                <div>
+                    <input type="reset" id="button" value="Reset"><br>
+                </div>
+            </label>
+            <label for="sum" class="submit">
+                <div>
+                    <input type="submit" id="sum" value="Submit"><br>
+                </div>
+            </label>
+        </div>
+    </form>
+
+
+    <p id="hungry">
+        Hungry? Order Your Delicious Food
+    </p>
+
+    <br>
+
+    <div id="about">
+        <h3 id="us">About Us</h3>
+        <p id="ab">Seasons Catering is a full service caterer serving the mumbai area. We are pleased to provide
+            beautifully presented, delicious cuisine - perfectly suited to your occasion. Our experienced staff is
+            friendly and professional and experienced in both corporate catering and wedding catering.
+            ​
+            We offer a full range of service from drop off and set-up, hostess helper, buffet service and full service.
+            We are happy to make site recommendations, provide rentals, linens and flowers; as well as make
+            recommendations for entertainment and transportation. We can accomodate any special dietary needs you may
+            have, Gluten Free, Dairy Free, Nut Free, etc.</p>
+    </div>
+    <div id="image">
+    </div>
+
+    <section class="bg">
+        <div id="produ">
+            <div>
+                <h3 id="pro">Our Products</h3>
+            </div>
+            <div id="box1">
+                <img src="img/pizza.jpg" alt="cannot load image" id="pizza">
+                <h5 id="super">Super Pizza</h5>
+            </div>
+            <div id="box2">
+                <img src="img/karhai.jpg" alt="cannot load image" id="karhai">
+                <h5 id="super">Brown Karhai</h5>
+            </div>
+            <div id="box3">
+                <img src="img/burger.jpg" alt="cannot load image" id="burger">
+                <h5 id="super">Zinger burger</h5>
+            </div>
+            <div id="box4">
+                <img src="img/veg curry with naan.jpeg" alt="cannot load image" id="curry">
+                <h5 id="super">Veg Curry</h5>
+            </div>
+
+            <div id="box5">
+                <img src="img/biryani.jpg" alt="cannot load image" id="biryani">
+                <h5 id="bri">Chicken biryani</h5>
+            </div>
+            <div id="box6">
+                <img src="img/mkorma.jpg" alt="cannot load image" id="korma">
+                <h5 id="bri">Mutton Korma</h5>
+            </div>
+
+            <div id="box7">
+                <img src="img/nehari.jpg" alt="cannot load image" id="nehari">
+                <h5 id="super">Beef Nehari</h5>
+            </div>
+            <div id="box8">
+                <img src="img/indian-raita.webp" alt="cannot load image" id="raita">
+                <h5 id="super">Indian Raita</h5>
+            </div>
+
+        </div>
+    </section>
+    <div>
+        <section>
+            <div id="contact">
+
+            </div>
+
+            <div>
+                <h4 id="conntt">
+                    Contact us
+                </h4>
+            </div>
+<div id="box9">
+            <form action="backend.php">
+                <div>
+                    <input type="text" name="yourname" id="namm" placeholder="Your Name"><br>
+                </div>
+
+                <div>
+                    <input type="email" name="youremail" id="ema" placeholder="Your Email"><br>
+                </div>
+
+                <div>
+                    <input type="text" name="yournum" id="numm" placeholder="Phone number">
+                </div>
+
+                <textarea name="" id="tarea" cols="30" rows="5" placeholder="Write message"></textarea>
+
+                <div>
+                    <input type="submit" value="Submit" id="subm">
+                </div>
+
+
+            </form>
+        </div>
+        </section>
+    </div>
+</body>
